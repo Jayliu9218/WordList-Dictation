@@ -1,7 +1,7 @@
 import random
 
-inputPath = '../1.txt'
-outputPath = './1.txt'
+inputPath = '../2.txt'
+outputPath = './2.txt'
 
 LinesOfFile = 0
 NewContent = []
