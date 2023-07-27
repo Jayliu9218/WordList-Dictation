@@ -16,13 +16,12 @@
 
 红宝书词汇APP的单词数据库就在APK安装文件中，解压后即可发现，并且最近几年的都有。我没有安装SQL相关软件，就直接上网查了其他人的解决方案，发现可以db文件并没有加密（微信的聊天文件Msg.db是加密的），用Python结合sqlite库可以直接读取其内容，再利用Python读写文件的操作，可以很轻松的得到单词数据。
 
-<img src=".\assets\image-20230727224139010.png" alt="image-20230727224139010"  />
+<img src=".\assets\image-20230727224139010.png" alt="image-20230727224139010" style="zoom: 80%;" />
 
 <center>
 图1 获取红宝书词汇apk与单词的db数据库    
 </center>
-
-![image-20230727224325253](.\assets\image-20230727224325253.png)
+<img src=".\assets\image-20230727224325253.png" alt="image-20230727224325253" style="zoom: 80%;" />
 
 <center>
 图2 单词的db数据库文件 
@@ -36,13 +35,12 @@
 
 至于具体的代码部分，下图应该是博客作者在查看数据库后进行的划分，我们取自己所需，听写的话其实只需要中文意义即可，不太需要其他东西，所以我把其他的都没有加入`onceItemOrder`列表，同时考虑到单词复习是章节化的，需要对不同章节的单词有所区分，故仅保留了`unit`一个属性。
 
-![image-20230727230551864](.\assets\image-20230727230551864.png)
+<img src=".\assets\image-20230727230551864.png" alt="image-20230727230551864" style="zoom: 80%;" />
 
 <center>
 图3 单词的属性列表    
 </center>
-
-![image-20230727230822332](.\assets\image-20230727230822332.png)
+<img src=".\assets\image-20230727230822332.png" alt="image-20230727230822332" style="zoom: 80%;" />
 
 <center>
 图4 调整后的`onceItemOrder`    
@@ -50,7 +48,7 @@
 
 除此之外，还对导出做了一些调整。
 
-![image-20230727231208577](.\assets\image-20230727231208577.png)
+<img src=".\assets\image-20230727231208577.png" alt="image-20230727231208577" style="zoom:80%;" />
 
 <center>
 图5 获取写入内容与一些调整 
@@ -62,13 +60,12 @@
 
 2. 行随机化：用一下Python的读写文件功能：首先读入新文件`X.txt`，再读取每一行的内容生成内容列表`NewContent`，同时获得总行数`LineOfFile`，根据总行数获得范围内的随机数列表`OrderList`。之后进行写入文件操作：逐行写入内容为：`str(i)+NewContent[OrderList[i]]`，即获得章节化的随机分布的单词中文列表。
 
-![image-20230727231441126](.\assets\image-20230727231441126.png)
+<img src=".\assets\image-20230727231441126.png" alt="image-20230727231441126" style="zoom:80%;" />
 
 <center>
 图6 调整后的原始单词本文件
 </center>
-
-![image-20230727232446888](.\assets\image-20230727232446888.png)
+<img src=".\assets\image-20230727232446888.png" alt="image-20230727232446888" style="zoom:80%;" />
 
 <center>
 图7 最终用于听写的单词本文件
@@ -83,14 +80,12 @@
 <center>
     戴上耳机，重温高中美好时光~~~
 </center>
-
-![image-20230727232954952](.\assets\image-20230727232954952.png)
+<img src=".\assets\image-20230727232954952.png" alt="image-20230727232954952" style="zoom:80%;" />
 
 <center>
 图8 听写示例
 </center>
-
-![IMG_4006](.\assets\IMG_4006.jpg)
+<img src=".\assets\IMG_4006.jpg" alt="IMG_4006" style="zoom:80%;" />
 
 <center>
 图9 听写示例
