@@ -1,7 +1,9 @@
 import random
 
-inputPath = '../2.txt'
-outputPath = './2.txt'
+NumberPath = input('input the chapter number : ')
+
+inputPath = '../' + NumberPath + '.txt'
+outputPath = './' + NumberPath + '.txt'
 
 LinesOfFile = 0
 NewContent = []
